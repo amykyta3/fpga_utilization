@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+    <title>Utilization Report</title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+    <div class="crumb-container">
+        <nav>
+            <ul id=crumbtrail>
+            </ul>
+        </nav>
+    </div>
+
+    <svg id="util_treemap" width="800" height="500"></svg>
+    
+    <form id="datasets">
+        <table id="info">
+            <tr>
+                <th>Current Module</th>
+                <td id="mod">XXX</td>
+            </tr>
+            <tr>
+                <th>Current Instance</th>
+                <td id="inst">XXX</td>
+            </tr>
+        </table>
+        
+        <table id="values">
+            <tr class="heading">
+                <th>Show</th>
+                <th>Type</th>
+                <th>Count</th>
+            </tr>
+        </table>
+    </form>
+
+
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="treemap.js"></script>
+</body>

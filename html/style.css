@@ -1,0 +1,85 @@
+form {
+  font-family: sans-serif;
+}
+
+form table {
+  	font-size:14px;
+	color:#333333;
+    border-width: 1px;
+	border-color: #666666;
+	border-collapse: collapse;
+    margin:4px;
+}
+
+form table th {
+	border-width: 1px;
+	padding: 4px;
+	border-style: solid;
+	border-color: #666666;
+	background-color: #dedede;
+}
+form table td {
+	border-width: 1px;
+	padding: 4px;
+	border-style: solid;
+	border-color: #666666;
+	background-color: #ffffff;
+}
+
+
+svg#util_treemap {
+  font: 10px sans-serif;
+}
+
+/*
+svg#util_treemap rect:hover {
+  filter: brightness(125%);
+}
+*/
+
+.crumb-container {
+    overflow: auto;
+}
+
+.crumb-container nav {
+  margin: 1px 0px;
+  padding: 0px;
+  
+  white-space: nowrap;
+  max-width: 800px;
+  height: 26px;
+  overflow: hidden;
+  float:left;
+}
+ 
+.crumb-container nav ul {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  float: right;
+}
+ 
+.crumb-container nav li {
+  display: inline-block;
+  vertical-align: top;
+  
+  border: 2px solid #333;
+  background: #eee;
+  margin-right: 1px;
+  padding: 0px 5px;
+}
+ 
+.crumb-container nav li a {
+  text-decoration: none;
+  font: 14px Helvetica, Verdana, sans-serif;
+  font-weight: bold;
+  color: #333;
+}
+
+.crumb-container nav li:hover {
+  background: #aaf;
+}
+
+.crumb-container nav li:last-child {
+    background: #aaf;
+}
