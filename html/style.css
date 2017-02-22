@@ -27,8 +27,16 @@ form table td {
 }
 
 
-svg#util_treemap {
+svg {
   font: 10px sans-serif;
+}
+
+svg text {
+    cursor: default;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 /*

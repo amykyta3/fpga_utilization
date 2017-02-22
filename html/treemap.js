@@ -71,6 +71,9 @@ function append_new_cells(cell_data, scale_x = noscale, scale_y = noscale) {
             return(0);
         });
     
+    cells.append("title")
+        .text(function(d) { return d.data.name; });
+    
     add_cell_events(cells);
     
     return(cells);
