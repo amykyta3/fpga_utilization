@@ -312,6 +312,10 @@ function init_datasets(data){
         .text(function(d) {return d});
     table_rows.append("td")
         .attr("class", "value");
+    table_rows.append("td")
+        .attr("class", "pparent");
+    table_rows.append("td")
+        .attr("class", "ptotal");
 }
 
 //------------------------------------------------------------------------------
@@ -366,12 +370,41 @@ function update_crumbtrail() {
     d3.select("form#datasets table#values").selectAll("td.value")
         .text(function(key) {
             return(current_top.data[key]);
-            //var sum=0;
-            //var leaves = current_top.leaves();
-            //for(var i=0; i<leaves.length; i++){
-            //    sum += +(leaves[i].data[key]);
-            //}
-            //return(sum);
+        });
+    
+    d3.select("form#datasets table#values").selectAll("td.pparent")
+        .text(function(key) {
+            var pval;
+            var val;
+            var percent;
+            val = current_top.data[key];
+            if(current_top.parent){
+                pval = current_top.parent.data[key];
+            }else{
+                pval = val;
+            }
+            
+            if(pval == 0){
+                percent = 0;
+            }else{
+                percent = 100*val/pval
+            }
+            return(percent.toFixed(2) + "%");
+        });
+    d3.select("form#datasets table#values").selectAll("td.ptotal")
+        .text(function(key) {
+            var pval;
+            var val;
+            var percent;
+            val = current_top.data[key];
+            pval = root.data[key];
+            
+            if(pval == 0){
+                percent = 0;
+            }else{
+                percent = 100*val/pval
+            }
+            return(percent.toFixed(2) + "%");
         });
     
     d3.select("form#datasets table#info").selectAll("td#mod")
